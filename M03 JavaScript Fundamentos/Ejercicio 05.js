@@ -8,12 +8,20 @@ function esPositivo(num) {
    // Si el número es negativo ---> "Es negativo".
    // Si el número es 0, devuelve false.
    // Tu código:
+   if (num > 0) {
+      return "es positivo";
+   }else if (num <0){
+      return "es negativo";
+   }else if (num === 0) {
+      return false;
+   }
 }
 
 function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
+   return str + "!";
 }
 
 function combinarNombres(nombre, apellido) {
@@ -26,28 +34,38 @@ function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
+   var string = nombre;
+   return string + "martin"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
    // Tu código:
+   var resultado = (alto * ancho)
+   return resultado + " metros cuadrados";
 }
 
 function retornarPerimetro(lado) {
    // La función recibe como argumento la medida de un lado de un cuadrado.
    // Debes retornar su perímetro.
    // Tu código:
+   var result = lado * 4;
+   return result + " metros";
 }
 
 function areaDelTriangulo(base, altura) {
    // Calcula el área de un triángulo y retorna el resultado.
    // Tu código:
+   var resultado = (base * altura)/2;
+   return resultado + " metros cuadrados";
 }
 
 function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
+   var resultado = euro * 1.20;
+   return resultado + " dolares";
 }
 
 function esVocal(letra) {
@@ -55,6 +73,15 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
+   if (letra.length === 1) {
+      if (letra.indexOf("a,e,i,o,u") === -1) {
+         console.log("dato incorrecto");
+      }else{
+         console.log("Es Vocal)
+      }
+   }else if (letra.length > 1){
+      return "Dato incorrecto";
+   }
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
